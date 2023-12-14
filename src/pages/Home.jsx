@@ -6,15 +6,25 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer"
 function Home() {
   return (
+    <>
     <div className="bg-gray-600">
       <Navbar/>
-      <Hero />
+      </div>
+
+      <div className="bg-slate-400">
+      <Hero  />
+      </div>
+
+      <div className="bg-gray-600">
       <Analytics />
+      <div className="bg-slate-400">
       <Newsletter />
-      <Cards />
+      </div>
+      {/* <Cards /> */}
       <Footer/>
 
     </div>
+    </>
   );
 }
 
