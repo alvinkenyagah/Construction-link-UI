@@ -5,18 +5,14 @@ import {
   FaInstagramSquare,
   FaTwitterSquare,
 } from "react-icons/fa";
-import ReactLogo from "./ReactLogo";
-
+import { logo } from '../assets';
 const Footer = () => {
   return (
     <footer className="mx-auto grid max-w-screen-xl gap-6 px-4 py-8 text-gray-300 lg:grid-cols-3">
       <div>
-        <ReactLogo type="static" size={96} />
-        <p className="pb-4">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi
-          repellat earum ipsum molestias ullam ex officiis porro nobis libero
-          debitis, dolor laudantium rerum quam! Numquam accusamus eaque totam
-          earum aut.
+      <img src={logo} alt='Logo' style={{display:"block", margin:"0 auto", width:"150PX", height:"auto"}} /> 
+        <p className="pb-4" style={{textAlign:"center"}}>
+        Empower Your Construction Success: Manage, Analyze, Optimize
         </p>
 
         <div className="flex">
@@ -59,7 +55,6 @@ const Footer = () => {
             <li className="footer-page-link">Pricing</li>
             <li className="footer-page-link">Documentation</li>
             <li className="footer-page-link">Guides</li>
-            <li className="footer-page-link">API Status</li>
           </ul>
         </div>
         <div>
@@ -67,7 +62,6 @@ const Footer = () => {
           <ul>
             <li className="footer-page-link">About</li>
             <li className="footer-page-link">Blog</li>
-            <li className="footer-page-link">Jobs</li>
             <li className="footer-page-link">Press</li>
             <li className="footer-page-link">Careers</li>
           </ul>

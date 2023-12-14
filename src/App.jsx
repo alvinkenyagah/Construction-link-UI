@@ -1,20 +1,24 @@
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Analytics from "./components/Analytics";
-import Newsletter from "./components/Newsletter";
-import Cards from "./components/Cards";
-import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import Register from "./pages/Register";
+import Login from "./pages/Login";
+import {Routes, Route} from "react-router-dom";
+
+
+
+
 
 function App() {
   return (
-    <div className="bg-gray-950">
-      <Navbar />
-      <Hero />
-      <Analytics />
-      <Newsletter />
-      <Cards />
-      <Footer />
-    </div>
+
+<>
+
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/SignUp" element={<Register />} />
+      <Route path="/SignIn" element={<Login />} />
+    </Routes>
+
+</>
   );
 }
 

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-import ReactLogo from "./ReactLogo";
+import { logo } from '../assets';
+import { Link} from "react-router-dom";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -11,12 +12,12 @@ const Navbar = () => {
 
   return (
     <div className="mx-auto flex h-24 max-w-screen-xl items-center justify-between px-4 text-white">
-      <ReactLogo type="spin" size={48} />
+       <img src={logo} alt='Logo' style={{display:"block", margin:"0 auto", width:"80PX", height:"auto"}} /> 
       <div className="hidden md:flex">
-        <p className="header-link">Home</p>
-        <p className="header-link">Account</p>
-        <p className="header-link">Sign In</p>
-        <p className="header-link">Sign Up</p>
+      <Link to="/"><p className="header-link">Home</p></Link>
+      <Link to="/"><p className="header-link">Account</p></Link>
+      <Link to="/SignIn"><p className="header-link">Sign In</p></Link>
+      <Link to="/SignUp"><p className="header-link">Sign Up</p></Link>
       </div>
 
       <div onClick={handleNav} className="block md:hidden">
@@ -34,12 +35,13 @@ const Navbar = () => {
           Navbar
         </h1>
         <ul>
-          <li className="navbar-link">Sign In</li>
-          <li className="navbar-link">Home</li>
-          <li className="navbar-link">Company</li>
-          <li className="navbar-link">Resources</li>
-          <li className="navbar-link">About</li>
-          <li className="p-4 hover:cursor-pointer hover:underline">Contact</li>
+        <Link to="/"><li className="navbar-link">Home</li></Link>
+        <Link to="/Company"><li className="navbar-link">Company</li></Link>
+        <Link to="/Resources"><li className="navbar-link">Resources</li></Link>
+        <Link to="/About"><li className="navbar-link">About</li></Link>
+        <Link to="/Contact"><li className="p-4 hover:cursor-pointer hover:underline">Contact</li></Link>
+        <Link to="/SignIn"><li className="navbar-link">Sign In </li></Link>
+        <Link to="/SignUp"><li className="navbar-link">Sign Up </li></Link>
         </ul>
       </div>
     </div>
