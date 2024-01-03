@@ -4,6 +4,7 @@ import Newsletter from "../components/Newsletter";
 import Cards from "../components/Cards";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer"
+import Reviews from "../components/Reviews";
 function Home() {
   return (
     <>
@@ -17,6 +18,7 @@ function Home() {
 
       <div className="bg-gray-600">
       <Analytics />
+      <Reviews/>
       <div className="bg-slate-400">
       <Newsletter />
       </div>
